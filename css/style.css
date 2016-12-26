@@ -1811,6 +1811,10 @@ input:focus + div svg {
     flex-grow: 1;
     -display: inline;
   }
+  .form-main__field--phone-number input,
+  .form-main__field--email input {
+    background-color: transparent;
+  }
   .form-main__field--phone-number {
     padding-bottom: 0;
   }
