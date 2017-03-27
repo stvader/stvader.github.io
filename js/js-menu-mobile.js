@@ -1,19 +1,19 @@
-var mainNav = document.querySelector('.main-nav');
-var menuToggle = document.querySelector('.js-menu-toggle');
+window.addEventListener('load', function() {
+	var toggle = document.querySelector('.main-nav__toggle');
+	var menu = document.querySelector('.main-nav');
+	var wrapper = document.querySelector('.main-nav__wrapper');
 
-function toggleMenu() {
-	
-	if (mainNav.classList.contains('main-nav--closed')) {
-		mainNav.classList.remove('main-nav--closed');
-		mainNav.classList.add('main-nav--opened');
-	} else {
-		mainNav.classList.remove('main-nav--opened');
-		mainNav.classList.add('main-nav--closed');
-	}
-}
+	toggle.addEventListener('click', function() {
+		if(menu.classList.contains('main-nav--closed')) {
+			menu.classList.remove('main-nav--closed');
+			menu.classList.add('main-nav--opened');
+			wrapper.style.height = (document.documentElement.clientHeight - 60) + 'px';
+			document.body.style.overflow = "hidden";
+		} else {
+			menu.classList.remove('main-nav--opened');
+			menu.classList.add('main-nav--closed');
+			document.body.style.overflow = ""
+		}
+	});
 
-if (mainNav.classList.contains('main-nav--no-js')) {
-	mainNav.classList.remove('main-nav--no-js');
-}
-
-menuToggle.addEventListener('click', toggleMenu);
+});
