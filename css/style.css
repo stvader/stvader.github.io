@@ -1,0 +1,206 @@
+@font-face {
+  font-family: OpenSansBold;
+  src: url(../fonts/opensansbold.woff2);
+}
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/opensans.woff2);
+}
+body {
+  -font-size: 16px;
+  -line-height: 18px;
+  -font-family: Arial, sans-serif;
+  -color: #000000;
+  -font-weight: bold;
+  background-color: #ffffff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+main {
+  background-color: #ffffff;
+  -outline: 1px solid orange;
+}
+main:before,
+main:after {
+  content: " ";
+  display: table;
+}
+main:after {
+  clear: both;
+}
+/* .btn {
+	display: block;
+	width: 100%;
+	padding-top: 16px;
+	padding-bottom: 19px;
+	text-align: center;
+	border: 2px solid @brown;
+	box-sizing: border-box;
+
+	background-color: @white;
+
+	text-decoration: none;
+	font-family: "OpenSansBold";
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 16px;
+	color: @brown;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: @brown;
+		color: @white;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, .3);
+	}
+} */
+picture {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-style: none;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik.eot');
+  src: url('../fonts/Rubik.eot?#iefix') format('embedded-opentype'), url('../fonts/Rubik.woff2') format('woff2'), url('../fonts/Rubik.woff') format('woff'), url('../fonts/Rubik.ttf') format('truetype'), url('../fonts/Rubik.svg#Rubik') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik Light';
+  src: url('../fonts/Rubik-Light.eot');
+  src: url('../fonts/Rubik-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Rubik-Light.woff2') format('woff2'), url('../fonts/Rubik-Light.woff') format('woff'), url('../fonts/Rubik-Light.ttf') format('truetype'), url('../fonts/Rubik-Light.svg#Rubik Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik Bold';
+  src: url('../fonts/Rubik-Bold.eot');
+  src: url('../fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Rubik-Bold.woff2') format('woff2'), url('../fonts/Rubik-Bold.woff') format('woff'), url('../fonts/Rubik-Bold.ttf') format('truetype'), url('../fonts/Rubik-Bold.svg#Rubik Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gentium Basic Bold';
+  src: url('../fonts/Gentium-Basic-Bold.eot');
+  src: url('../fonts/Gentium-Basic-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gentium-Basic-Bold.woff2') format('woff2'), url('../fonts/Gentium-Basic-Bold.woff') format('woff'), url('../fonts/Gentium-Basic-Bold.ttf') format('truetype'), url('../fonts/Gentium-Basic-Bold.svg#Gentium Basic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poor Richard Regular';
+  src: url('../fonts/Poor-Richard-Regular.eot');
+  src: url('../fonts/Poor-Richard-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Gentium-Basic-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.page-header {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  /*check it*/
+  box-sizing: border-box;
+  background-color: #2b2b2b;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -padding-right: 40px;
+  -vertical-align: top;
+}
+.page-header:before,
+.page-header:after {
+  content: " ";
+  display: table;
+}
+.page-header:after {
+  clear: both;
+}
+.page-header__logo {
+  display: inline-block;
+}
+.page-header__title {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poor Richard Regular';
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  color: #ffffff;
+  display: inline-block;
+  opacity: .7;
+  vertical-align: top;
+}
+.main-nav {
+  -position: relative;
+  background-color: rgba(45, 45, 45, 0.8);
+}
+.main-nav__wrapper {
+  position: absolute;
+  background-color: rgba(43, 43, 43, 0.8);
+  top: 60px;
+  left: 0;
+  right: 0;
+}
+.main-nav__toggle {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 10;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  outline: 0;
+  background-color: #2b2b2b;
+  opacity: .8;
+  cursor: pointer;
+}
+.main-nav--closed .main-nav__wrapper {
+  display: none;
+}
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+}
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -4px;
+  width: 28px;
+  height: 2px;
+  background-color: #ffffff;
+}
+.main-nav--opened .main-nav__toggle::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+.main-nav--opened .main-nav__toggle::after {
+  transform: rotate(-45deg);
+}
+/*@import "blocks/main-nav.less";
+@import "blocks/top.less";
+@import "blocks/week-product.less";
+@import "blocks/about.less";
+@import "blocks/contacts.less";
+@import "blocks/footer.less";
+@import "blocks/page-catalog-main.less";
+@import "blocks/form.less";*/
