@@ -87,7 +87,7 @@ picture {
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gentium Basic Bold';
+  font-family: 'Gentium Basic Bold??';
   src: url('../fonts/Gentium-Basic-Bold.eot');
   src: url('../fonts/Gentium-Basic-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gentium-Basic-Bold.woff2') format('woff2'), url('../fonts/Gentium-Basic-Bold.woff') format('woff'), url('../fonts/Gentium-Basic-Bold.ttf') format('truetype'), url('../fonts/Gentium-Basic-Bold.svg#Gentium Basic') format('svg');
   font-weight: normal;
@@ -97,6 +97,13 @@ picture {
   font-family: 'Poor Richard Regular';
   src: url('../fonts/Poor-Richard-Regular.eot');
   src: url('../fonts/Poor-Richard-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Gentium-Basic-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/Merriweather.eot');
+  src: url('../fonts/Merriweather.eot?#iefix') format('embedded-opentype'), url('../fonts/Merriweather.woff2') format('woff2'), url('../fonts/Merriweather.woff') format('woff'), url('../fonts/Merriweather.ttf') format('truetype'), url('../fonts/Merriweather.svg#Merriweather') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -141,14 +148,16 @@ picture {
 }
 .main-nav {
   -position: relative;
-  background-color: rgba(45, 45, 45, 0.8);
+  -background-color: rgba(45, 45, 45, 0.8);
+  z-index: 1000;
 }
 .main-nav__wrapper {
   position: absolute;
-  background-color: rgba(43, 43, 43, 0.8);
+  background-color: rgba(43, 43, 43, 0.98);
   top: 60px;
   left: 0;
   right: 0;
+  z-index: 100;
 }
 .main-nav__toggle {
   margin: 0;
@@ -196,6 +205,89 @@ picture {
 .main-nav--opened .main-nav__toggle::after {
   transform: rotate(-45deg);
 }
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  text-transform: uppercase;
+  padding-right: 20px;
+}
+.main-nav__item {
+  margin: 0;
+  padding: 0;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.main-nav__link {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik Light';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  -display: block;
+  opacity: .6;
+  text-decoration: none;
+}
+.main-nav__item--current .main-nav__link {
+  opacity: 1;
+  position: relative;
+}
+.main-nav__item--current .main-nav__link::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -10px;
+  /*chech in psd*/
+  left: 0;
+  right: 0;
+  background-color: #9e0b0f;
+}
+.no-js .page-header {
+  position: static;
+  height: auto;
+}
+.no-js .main-nav__wrapper {
+  display: block;
+  position: static;
+  background-color: #2b2b2b;
+}
+.no-js .main-nav__toggle {
+  display: none;
+}
+.main-block {
+  padding-top: 60px;
+  /*check this size*/
+}
+.no-js .main-block {
+  padding-top: 0;
+}
+.slider__images {
+  position: relative;
+  /*bag!!!*/
+  overflow: hidden;
+  height: 100px;
+  /*check with psd*/
+  -display: none;
+}
+.slider__images-wrapper {
+  font-size: 0;
+  height: 100px;
+  white-space: nowrap;
+}
+.slider__picture {
+  position: relative;
+  /*bag!!!*/
+  display: inline-block;
+}
+.slider__picture-note {
+  position: absolute;
+}
 /*@import "blocks/main-nav.less";
 @import "blocks/top.less";
 @import "blocks/week-product.less";
@@ -204,3 +296,8 @@ picture {
 @import "blocks/footer.less";
 @import "blocks/page-catalog-main.less";
 @import "blocks/form.less";*/
+@media (min-width: 800px) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
