@@ -6,7 +6,7 @@ $(document).ready(function(){
     	autoplay: true,
     	autoplaySpeed: 5000,
     	arrows: false,
-    	dots: true
+    	dots: true,
     	dotsClass: 'slider__pagination'
 
     });
