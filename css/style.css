@@ -1,0 +1,413 @@
+body {
+	min-width: 350px;
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.main-header {
+	margin: 0;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	background-color: #2c2c69;
+	
+}
+
+.main-header__title {
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+	font-size: 40px;
+}
+
+.main {
+	
+}
+
+.form-container {
+	width: 80%;
+	margin: 40px auto;
+	font-size: 0;
+}
+
+.form-add__input-container {
+	display: inline-block;
+	margin-right: 30px;
+	width: 25%;
+	vertical-align: top;
+}
+
+.form-add__input-container--card-number {
+	width: 145px;
+}
+
+.form-add__input-container--card-type {
+	width: 130px;
+}
+
+.form-add__input-label {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #1a1a1a;
+
+	cursor: pointer;
+}
+
+.form-add__input,
+.form-add__comment {
+	width: 100%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 4px;
+	padding-right: 4px;
+	border-radius: 4px;
+	border: 1px solid #d5d5d5;
+
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #2b2b2b;
+}
+
+.form-add__input:focus,
+.form-add__input:active,
+.form-add__comment:focus,
+.form-add__comment:active {
+	border: 1px solid forestgreen;
+}
+
+.form-add__comment {
+	resize: none;
+	width: 100%;
+
+	margin: 0;
+	-padding: 0;
+	adding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.form-add__select {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 4px;
+	padding-right: 4px;
+
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #2b2b2b;
+}
+
+.form-add__add {
+	display: inline-block;
+	margin-top: 60px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	border-radius: 6px;
+	border: none;
+	outline: none;
+	background-color: #0d0d63;
+	opacity: .6;
+
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+
+	cursor: pointer;
+}
+
+.form-add__add:hover,
+.form-add__add:focus {
+	opacity: 1;
+}
+
+.notebook {
+	width: 80%;
+	margin: 60px auto;
+	padding-left: 7px;
+}
+
+.notebook__card-container {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.notebook__item {
+	display: inline-block;
+	height: 35px;
+	margin-right: 28px;
+	padding-left: 3px;
+	vertical-align: top;
+	box-sizing: border-box;
+
+	-border: 1px solid #000;
+
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #1f1d1d;
+	line-height: 35px;
+
+}
+
+.notebook__comment {
+	position: relative;
+	width: 25%;
+	min-width: 130px;
+	overflow: hidden;
+
+}
+
+.notebook__comment::after {
+	content: "...";
+	position: absolute;
+	width: 20px;
+	height: 35px;
+	top: 0;
+	right: 0;
+	z-index: 3000;
+	background-color: #fff;
+}
+
+.comment-after-hidden::after {
+	display: none;
+}
+
+.notebook__btn-delete {
+	position: relative;
+	width: 25px;
+	height: 25px;
+	-margin-left: 75px;
+	margin-top: 6px;
+	border-radius: 50%;
+	border: none;
+	background-color: #ca1313;
+	opacity: .6;
+	cursor: pointer;
+}
+
+.notebook__btn-delete::before,
+.notebook__btn-delete::after {
+	content: "";
+	position: absolute;
+	width: 17px;
+	height: 2px;
+	left: 4px;
+	top: 11.5px;
+	background-color: #fff;
+
+	transform: rotate(45deg);
+}
+
+.notebook__btn-delete::after {
+	transform: rotate(-45deg);
+}
+
+.notebook__btn-delete:hover,
+.notebook__btn-delete:focus {
+	opacity: 1;
+}
+
+.pop-up-container {
+	display: none;
+}
+
+.pop-up-container--active {
+	display: block;
+}
+
+.pop-up-confirm {
+	display: block;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 9000;
+	width: 360px;
+	height: 300px;
+	margin-top: -150px;
+	margin-left: -180px;
+	padding: 30px;
+	box-sizing: border-box;
+	background-color: #fff;
+
+}
+
+.pop-up-confirm__question {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20px;
+	color: #7c7c7c;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.pop-up-confirm__label {
+	display: block;
+	margin-bottom: 8px;
+	color: #2b2b2b;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+.pop-up-confirm__input {
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 2px 4px;
+}
+
+.pop-up-confirm__btn-container {
+	width: 180px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pop-up-confirm__btn {
+	width: 70px;
+	height: 30px;
+
+	border-radius: 4px;
+	border: none;
+	outline: none;
+
+	background-color: #100f27;
+
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
+
+	cursor: pointer;
+}
+
+.pop-up-confirm__btn:not(:last-child) {
+	margin-right: 25px;
+}
+
+.shadow {
+	display: block;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 8000;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 700px) {
+	.form-container,
+	.notebook {
+		width: 90%;
+	}
+
+	.main-header__title {
+		font-size: 30px;
+	}
+
+	.form-add__input-container {
+		display: block;
+		width: 100%;
+	}
+
+	.form-add__input-label,
+	.form-add__input,
+	.form-add__comment {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.form-add__input-label {
+		width: 140px;
+	}
+
+	.form-add__input,
+	.form-add__comment {
+		width: 50%;
+	}
+
+	.form-add__add {
+		margin-top: 20px;
+	}
+
+	.notebook__item {
+		margin-right: 15px;
+		-font-size: 14px;
+	}
+
+
+}
+
+@media screen and (max-width: 460px) {
+	.notebook {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.main-header__title {
+		font-size: 20px;
+	}
+
+	.form-add__input-label {
+		width: 120px;
+		font-size: 14px;
+	}
+
+	.form-add__add {
+		font-size: 14px;
+	}
+
+	.notebook__item {
+		margin-right: 10px;
+		font-size: 14px;
+	}
+
+	.notebook__comment {
+		margin-right: 0;
+	}
+
+	.notebook__type {
+		width: 40px;
+	}
+
+	.notebook__btn-delete {
+		width: 20px;
+		height: 20px;
+		margin-top: 9px;		
+	}
+
+	.notebook__btn-delete::before,
+	.notebook__btn-delete::after {
+		width: 12px;
+		height: 2px;
+		left: 4px;
+		top: 9px;
+		background-color: #fff;
+	}
+
+	.pop-up-confirm {
+		width: 240px;
+		margin-left: -120px;
+
+	}
+}
