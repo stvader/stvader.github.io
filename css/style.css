@@ -10,7 +10,17 @@
   unicode-range: U+000-5FF;
 }
 
-
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans'),
+       url('//fonts.googleapis.com/css?family=Open+Sans.woff2') format('woff2'), 
+       url('//fonts.googleapis.com/css?family=Open+Sans.woff') format('woff'),
+       url('//fonts.googleapis.com/css?family=Open+Sans.ttf') format('ttf'),
+       url('//fonts.googleapis.com/css?family=Open+Sans.eot') format('eot');
+  unicode-range: U+000-5FF;
+}
 
 html {
   font-size: 100%;
